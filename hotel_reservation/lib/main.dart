@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_reservation/screens/home_screen.dart';
 /*
 *
 * Author: Emmanuel Ozioma
@@ -24,25 +25,10 @@ class MyApp extends StatelessWidget {
           primary: const Color(0xFF0A0E21),
         )
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Hotel Reservation"),
-      ),
+      initialRoute: '/home',
+      routes: {
+        '/home' : (context) => Home(),
+      },
     );
   }
 }
